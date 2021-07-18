@@ -20,7 +20,7 @@ namespace drawing_canvas
             Fill(canvas, x - 1, y - 1, canvas.Content[y - 1, x - 1], color);
         }
 
-        // Recursively call until boundary or another drawing is hit
+        // Recursively call to change color on all directions until boundary or another drawing is hit
         private void Fill(Canvas canvas, int x, int y, string previousColor, string newColor)
         {
             if (x < 0 || y < 0 || x >= canvas.Width || y >= canvas.Height || // Canvas boundary
